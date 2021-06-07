@@ -60,7 +60,7 @@ Next in your Activity/Fragment setup SortView like this
             .onSort(list) //infers direction
             .equalSpacing() //optional: showFirstDivider: Boolean, showLastDivider: Boolean
 ```
-*Make sure to checkout the documentation https://github.com/minseunghyun/slush for more information on how to setup the adapter (it's really easy)
+*Make sure to checkout the documentation https://github.com/minseunghyun/slush for more information on how to setup the adapter (it's really easy)*
 
 Notice that SortView takes type (`String`) that is the same as the list the items are in.
 
