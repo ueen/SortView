@@ -8,7 +8,7 @@ Theres an example App in the app module, check it out!
 
 ![example](https://user-images.githubusercontent.com/5067479/121024028-1ec93980-c7a4-11eb-96e9-e08b3711c46c.gif)
 
-## Implemention
+## Implementation
 
 Step 1. Add the JitPack repository to your build file 
 ```groovy
