@@ -1,0 +1,3 @@
+rootProject.name = "SortView"
+include ':app'
+include ':sortview'
