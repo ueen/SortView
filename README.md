@@ -60,12 +60,14 @@ Next in your Activity/Fragment setup SortView like this
             .onSort(list) //infers direction
             .equalSpacing() //optional: showFirstDivider: Boolean, showLastDivider: Boolean
 ```
-Make sure to checkout //documentation https://github.com/minseunghyun/slush for more information on how to setup the adapter (it's really easy)
+Make sure to checkout the documentation https://github.com/minseunghyun/slush for more information on how to setup the adapter (it's really easy)
+
+Notice that SortView takes type (`String`) that is the same as the list the items are in.
 
 you can set `.sortDirection(SortView.DRAG_HORIZONTAL)` manually after `.onSort` otherwise it is infered there. All dragDirs are supported </br>
 see https://developer.android.com/reference/androidx/recyclerview/widget/ItemTouchHelper.SimpleCallback
 
-`.onSort` is syncing your list but you could also get the exact position with `.onSort { startPosition, target ->  }`
+`.onSort(list)` is syncing your list but you could also get the exact positions with `.onSort { startPosition, target ->  }`
 
 `.equalSpacing()` is optional but helps to space out the items equally if they cover less area than SortView (no scrolling)
 
