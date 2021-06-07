@@ -1,5 +1,5 @@
 # SortView for Android
-
+[![](https://jitpack.io/v/ueen/SortView.svg)](https://jitpack.io/#ueen/SortView)
 ### An easy solution to drag sorting based on Recyclerview
 100% Kotlin
 
