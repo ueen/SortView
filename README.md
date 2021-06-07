@@ -3,10 +3,15 @@
 ### An easy solution to drag sorting based on Recyclerview
 100% Kotlin
 
+### Example
+Theres an example App in the app module, check it out!
+
+![example](https://user-images.githubusercontent.com/5067479/121024028-1ec93980-c7a4-11eb-96e9-e08b3711c46c.gif)
+
 ## Implemention
 
 Step 1. Add the JitPack repository to your build file 
-```
+```groovy
 	allprojects {
 		repositories {
 			...
@@ -16,7 +21,7 @@ Step 1. Add the JitPack repository to your build file
 ```
 
 Step 2. Add the dependency
-```
+```groovy
 	dependencies {
 	        implementation 'com.github.ueen:SortView:0.1'
 	}
@@ -26,7 +31,7 @@ Step 2. Add the dependency
 ## Usage
 
 SortView is basically a Recyclerview, so just add it to your xml as you would do normally
-```
+```xml
 <de.ueen.sortview.SortView
         android:id="@+id/sortView"
         android:layout_width="0dp"
@@ -40,7 +45,7 @@ SortView is basically a Recyclerview, so just add it to your xml as you would do
 Also create a xml with how each item should look (here `R.layout.string_item`)
 
 Next in your Activity/Fragment setup SortView like this
-```
+```kotlin
         val list = listOf<String>("hi","whats","going","on")
 
         val sortView = findViewById<SortView<String>>(R.id.sortView)
@@ -64,10 +69,7 @@ see https://developer.android.com/reference/androidx/recyclerview/widget/ItemTou
 
 `.equalSpacing()` is optional but helps to space out the items equally if they cover less area than SortView (no scrolling)
 
-Theres an example App in the app module, check it out!
-
-
-
+</br></br>
 Ok, hope you enjoy, let me know if you encounter any issues :)
 
 ### SortView builds on great librarys
