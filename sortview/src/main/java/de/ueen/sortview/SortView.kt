@@ -23,13 +23,15 @@ class SortView<ITEM> @JvmOverloads constructor(
 
     var editor: ItemListEditor<ITEM>? = null
     private var onSortListener: OnSortListener? = null
+    private var itemTouchHelper: ItemTouchHelper? = null
 
     fun setupAdapter(adapter: (Slush.SingleType<ITEM>) -> Slush.SingleType<ITEM>) = apply {
         editor = adapter(Slush.SingleType()).into(this).itemListEditor
     }
 
     fun sortDirection(dragDir: Int) = apply {
-        ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(dragDir, 0) {
+        itemTouchHelper?.attachToRecyclerView(null)
+        itemTouchHelper = ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(dragDir, 0) {
             override fun onMove(
                 recyclerView: RecyclerView,
                 start: ViewHolder,
@@ -42,7 +44,8 @@ class SortView<ITEM> @JvmOverloads constructor(
 
             override fun onSwiped(viewHolder: ViewHolder, direction: Int) {}
 
-        }).attachToRecyclerView(this)
+        })
+        itemTouchHelper?.attachToRecyclerView(this)
     }
 
     fun onSort(listener: (startPosition: Int, target: Int) -> Unit) = onSort(
@@ -62,8 +65,10 @@ class SortView<ITEM> @JvmOverloads constructor(
     fun onSort(listener: OnSortListener) = apply {
         onSortListener = listener
 
-        val isHorizontal =  (layoutManager as LinearLayoutManager).orientation == LinearLayoutManager.HORIZONTAL
-        sortDirection( if (isHorizontal) DRAG_HORIZONTAL else DRAG_VERTICAL)
+        if (itemTouchHelper == null) {
+            val isHorizontal =  (layoutManager as LinearLayoutManager).orientation == LinearLayoutManager.HORIZONTAL
+            sortDirection( if (isHorizontal) DRAG_HORIZONTAL else DRAG_VERTICAL)
+        }
     }
 
     fun equalSpacing(showFirstDivider: Boolean = false, showLastDivider: Boolean = false) = apply {
