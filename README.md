@@ -1,7 +1,6 @@
-# SortView for Android
-[![](https://jitpack.io/v/ueen/SortView.svg)](https://jitpack.io/#ueen/SortView)
-### An easy solution to drag sorting based on Recyclerview
+# SortView for Android [![](https://jitpack.io/v/ueen/SortView.svg)](https://jitpack.io/#ueen/SortView)
 100% Kotlin
+### An easy solution to drag sorting based on Recyclerview
 
 ![example](https://user-images.githubusercontent.com/5067479/121024028-1ec93980-c7a4-11eb-96e9-e08b3711c46c.gif)
 
