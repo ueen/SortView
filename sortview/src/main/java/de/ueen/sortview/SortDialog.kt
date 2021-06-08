@@ -11,13 +11,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 class SortDialog() {
 
     companion object {
-        fun <ITEM> show(context: Context, list: List<ITEM>, title: String? = null, horizontal: Boolean = false, itemLayout: Int = R.layout.simple_list_item_1, listener: (List<ITEM>) -> Unit) {
+        fun <ITEM> show(context: Context, list: List<ITEM>, title: String? = null, horizontal: Boolean = false, listener: (List<ITEM>) -> Unit) {
             val builder: AlertDialog.Builder = AlertDialog.Builder(context)
             builder.setTitle(title)
 
             val sortView = SortView<String>(context)
                 .setupAdapter { adapter ->
-                    adapter.setItemLayout(itemLayout)
+                    adapter.setItemLayout(R.layout.simple_list_item_1)
                     adapter.setLayoutManager(
                         LinearLayoutManager(context, if (horizontal) LinearLayoutManager.HORIZONTAL else LinearLayoutManager.VERTICAL, false))
                     adapter.onBind { view, s ->
