@@ -20,7 +20,7 @@ allprojects {
 Step 2. Add the dependency
 ```groovy
 dependencies {
-	implementation 'com.github.ueen:SortView:0.4'
+	implementation 'com.github.ueen:SortView:0.4.2'
 }
 ```
 
