@@ -43,19 +43,19 @@ Also create a xml with how each item should look (here `R.layout.string_item`)
 
 Next in your Activity/Fragment setup SortView like this
 ```kotlin
-        val list = listOf<String>("hi","whats","going","on")
+val list = listOf<String>("hi","whats","going","on")
 
-        val sortView = findViewById<SortView<String>>(R.id.sortView)
-            .setupAdapter { adapter ->
-                adapter.setItemLayout(R.layout.string_item)
-                adapter.setLayoutManager(
-                    LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false))
-                adapter.onBind { view, s ->
-                    view.findViewById<TextView>(R.id.textView).text = s }
-                adapter.setItems(list)
-            }
-            .onSort(list) //infers direction
-            .equalSpacing() //optional: showFirstDivider: Boolean, showLastDivider: Boolean
+val sortView = findViewById<SortView<String>>(R.id.sortView)
+    .setupAdapter { adapter ->
+        adapter.setItemLayout(R.layout.string_item)
+        adapter.setLayoutManager(
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false))
+        adapter.onBind { view, s ->
+            view.findViewById<TextView>(R.id.textView).text = s }
+        adapter.setItems(list)
+    }
+    .onSort(list) //infers direction
+    .equalSpacing() //optional: showFirstDivider: Boolean, showLastDivider: Boolean
 ```
 *Make sure to checkout the documentation https://github.com/minseunghyun/slush for more information on how to setup the adapter (it's really easy)*
 
