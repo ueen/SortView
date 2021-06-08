@@ -63,6 +63,8 @@ Notice that SortView takes a type (`String`) that is the same as the list the it
 
 `.onSort(list)` is syncing your list but you could also get the exact positions with `.onSort { startPosition, target ->  }`
 
+you can manually set `.sortDirection(SortView.DRAG_HORIZONTAL)` otherwise its infered in `.onSort`, all dragDirs are supported see https://developer.android.com/reference/androidx/recyclerview/widget/ItemTouchHelper.SimpleCallback
+
 `.equalSpacing()` is optional but helps to space out the items equally if they cover less area than SortView (no scrolling)
 
 #### SimpleDialog
