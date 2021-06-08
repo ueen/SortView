@@ -20,7 +20,7 @@ Step 1. Add the JitPack repository to your build file
 Step 2. Add the dependency
 ```groovy
 	dependencies {
-	        implementation 'com.github.ueen:SortView:0.3'
+	        implementation 'com.github.ueen:SortView:0.4'
 	}
 ```
 
