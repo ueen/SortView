@@ -21,7 +21,7 @@ class SortView<ITEM> @JvmOverloads constructor(
         const val DRAG_HORIZONTAL = ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
     }
 
-    private var editor: ItemListEditor<ITEM>? = null
+    var editor: ItemListEditor<ITEM>? = null
     private var onSortListener: OnSortListener? = null
 
     fun setupAdapter(adapter: (Slush.SingleType<ITEM>) -> Slush.SingleType<ITEM>) = apply {
@@ -52,7 +52,7 @@ class SortView<ITEM> @JvmOverloads constructor(
             }
         })
 
-    fun onSort(list: List<ITEM>) = onSort(
+    fun onSort(list: List<*>) = onSort(
         object : OnSortListener {
             override fun onSort(startPosition: Int, target: Int) {
                 Collections.swap(list, startPosition, target)

@@ -1,12 +1,11 @@
 package de.ueen.sortviewexample
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import de.ueen.sortview.SortDialog
 import de.ueen.sortview.SortView
 
 class TestActivity : AppCompatActivity() {
@@ -29,6 +28,12 @@ class TestActivity : AppCompatActivity() {
             .onSort(list) //infers direction
             //.sortDirection(SortView.DRAG_HORIZONTAL)
             .equalSpacing() //optional: showFirstDivider: Boolean, showLastDivider: Boolean
+
+        val intList = listOf(1,2,3,4,5)
+        SortDialog.show(this, intList, "SortDialog") { newList ->
+            //intList reordered
+            Log.d("SortDialog", "intList reordered: "+newList.toString())
+        }
 
     }
 }
