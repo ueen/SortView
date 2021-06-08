@@ -34,7 +34,6 @@ SortView is basically a Recyclerview, so just add it to your xml as you would do
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="16dp"
         tools:listitem="@layout/string_item" />
 ```
 *No worries padding is accounted for, vertical or horizontal orientation are supported*
