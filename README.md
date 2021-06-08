@@ -66,7 +66,7 @@ you can manually set `.sortDirection(SortView.DRAG_HORIZONTAL)` otherwise its in
 
 `.equalSpacing()` is optional but helps to space out the items equally if they cover less area than SortView (no scrolling)
 
-#### SimpleDialog
+### SimpleDialog
 
 Or use the simple SortDialog to quickly get a reordered list
 ```kotlin
