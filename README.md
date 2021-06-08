@@ -80,7 +80,7 @@ Theres an example App in the app module, check it out!
 
 ![example](https://user-images.githubusercontent.com/5067479/121024028-1ec93980-c7a4-11eb-96e9-e08b3711c46c.gif)
 
-Another example, here SortView is nested in regular vertical RecyclerView
+Another example, here SortView is nested in a regular vertical RecyclerView
 
 ![example2](https://user-images.githubusercontent.com/5067479/121154037-df075e00-c846-11eb-8969-f183a99b501c.gif)
 
