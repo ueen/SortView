@@ -59,10 +59,7 @@ Next in your Activity/Fragment setup SortView like this
 ```
 *Make sure to checkout the documentation https://github.com/minseunghyun/slush for more information on how to setup the adapter (it's really easy)*
 
-Notice that SortView takes type (`String`) that is the same as the list the items are in.
-
-you can set `.sortDirection(SortView.DRAG_HORIZONTAL)` manually after `.onSort` otherwise it is infered there. All dragDirs are supported </br>
-see https://developer.android.com/reference/androidx/recyclerview/widget/ItemTouchHelper.SimpleCallback
+Notice that SortView takes a type (`String`) that is the same as the list the items are in.
 
 `.onSort(list)` is syncing your list but you could also get the exact positions with `.onSort { startPosition, target ->  }`
 
