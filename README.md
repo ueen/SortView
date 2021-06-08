@@ -3,9 +3,6 @@
 ### An easy solution to drag sorting based on Recyclerview
 100% Kotlin
 
-### Example
-Theres an example App in the app module, check it out!
-
 ![example](https://user-images.githubusercontent.com/5067479/121024028-1ec93980-c7a4-11eb-96e9-e08b3711c46c.gif)
 
 ## Implementation
@@ -71,8 +68,32 @@ see https://developer.android.com/reference/androidx/recyclerview/widget/ItemTou
 
 `.equalSpacing()` is optional but helps to space out the items equally if they cover less area than SortView (no scrolling)
 
+#### SimpleDialog
+
+Or use the simple SortDialog to quickly get a reordered list
+```kotlin
+SortDialog.show(this, list) { newList -> ... } //optional: title: String, horizontal: Boolean, itemLayout: Int (R.layout.simple_list_item_1)
+```
+
 </br></br>
 Ok, hope you enjoy, let me know if you encounter any issues :)
+
+### Example
+Theres an example App in the app module, check it out!
+
+![example](https://user-images.githubusercontent.com/5067479/121024028-1ec93980-c7a4-11eb-96e9-e08b3711c46c.gif)
+
+Another example, here SortView is nested in regular vertical RecyclerView
+
+![example2](https://user-images.githubusercontent.com/5067479/121154037-df075e00-c846-11eb-8969-f183a99b501c.gif)
+
+And the simple Dialog
+
+![example3](https://user-images.githubusercontent.com/5067479/121163371-02360b80-c84f-11eb-8151-1826fca93299.gif)
+
+and with `SortDialog.show(this, list, horizontal = true)`
+
+![ezgif-3-d3e758696644](https://user-images.githubusercontent.com/5067479/121165751-c7cd6e00-c850-11eb-8d93-eb9f793ebf68.gif)
 
 ### SortView builds on great librarys
 https://github.com/minseunghyun/slush </br>
