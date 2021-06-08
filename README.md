@@ -71,7 +71,7 @@ you can manually set `.sortDirection(SortView.DRAG_HORIZONTAL)` otherwise its in
 
 Or use the simple SortDialog to quickly get a reordered list
 ```kotlin
-SortDialog.show(this, list) { newList -> ... } //optional: title: String, horizontal: Boolean, itemLayout: Int (R.layout.simple_list_item_1)
+SortDialog.show(this, list) { newList -> ... } //optional: title: String, horizontal: Boolean
 ```
 
 </br></br>
