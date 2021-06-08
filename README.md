@@ -20,7 +20,7 @@ Step 1. Add the JitPack repository to your build file
 Step 2. Add the dependency
 ```groovy
 	dependencies {
-	        implementation 'com.github.ueen:SortView:0.1'
+	        implementation 'com.github.ueen:SortView:0.2'
 	}
 ```
 
@@ -93,7 +93,7 @@ And the simple Dialog
 
 and with `SortDialog.show(this, list, horizontal = true)`
 
-![ezgif-3-d3e758696644](https://user-images.githubusercontent.com/5067479/121165751-c7cd6e00-c850-11eb-8d93-eb9f793ebf68.gif)
+![example4](https://user-images.githubusercontent.com/5067479/121165751-c7cd6e00-c850-11eb-8d93-eb9f793ebf68.gif)
 
 ### SortView builds on great librarys
 https://github.com/minseunghyun/slush </br>
