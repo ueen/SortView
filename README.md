@@ -73,7 +73,7 @@ SortDialog.show(this, list) { newList -> ... } //optional: title: String, horizo
 ```
 
 </br></br>
-Ok, hope you enjoy, let me know if you encounter any <a href=“https://github.com/ueen/SortView/issues">issues</a> :)
+Ok, hope you enjoy, let me know if you encounter any <a href=“https://github.com/ueen/SortView/issues/">issues</a> :)
 
 ### Example
 Theres an example App in the app module, check it out!
